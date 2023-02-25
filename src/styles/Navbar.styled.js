@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapped = styled.section`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 15%;
     background-color: #c0eef2;
@@ -26,7 +26,12 @@ const Wrapped = styled.section`
     }
 
     .add-new-shoe {
-        margin-right: 2rem;
+        margin: auto;
+    }
+
+    .add-link {
+        width: 10rem;
+        height: 2.5rem;
     }
 `;
 

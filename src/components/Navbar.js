@@ -10,17 +10,21 @@ const Navbar = () => {
         <Wrapped>
             <GiFootsteps className="navbar-logo" />
             <div className="buttons">
-                <Button variant="contained">
-                    <Link to="/">Home</Link>
-                </Button>
-                <Button variant="contained">
-                    <Link to="/shoes">Shoes</Link>
-                </Button>
+                <Link to="/">
+                    <Button variant="contained">Home</Button>
+                </Link>
+
+                <Link to="/shoes">
+                    <Button variant="contained">Shoes</Button>
+                </Link>
             </div>
             <h2>Shoe App by Ar2r</h2>
-            <Button variant="contained" className="add-new-shoe">
-                <Link to="/add-new-shoes">Add New Shoes</Link>
-            </Button>
+
+            <Link to="/add-new-shoes" className="add-link">
+                <Button variant="contained" className="add-new-shoe">
+                    Add New Shoes
+                </Button>
+            </Link>
         </Wrapped>
     );
 };

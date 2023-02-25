@@ -7,7 +7,7 @@ const Wrapped = styled.section`
     .shoes-table {
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, auto);
         width: 70%;
         height: 80%;
         background-color: #e9f8f9;
