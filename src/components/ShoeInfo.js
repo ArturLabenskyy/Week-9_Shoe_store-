@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
 import Wrapped from "../styles/ShoeInfo.styled";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Api from "../API/api";
+import { Button } from "@mui/material";
 
 const ShoeInfo = ({ shoe }) => {
     const [read, setRead] = useState(true);
@@ -13,6 +14,8 @@ const ShoeInfo = ({ shoe }) => {
     const [shoePrice, setPrice] = useState(shoe.price);
     const [shoeStock, setStock] = useState(shoe.inStock);
     const [shoeUrl, setUrl] = useState(shoe.image);
+
+    const navigate = useNavigate();
 
     const editClick = () => {
         setOther("block");
@@ -32,6 +35,7 @@ const ShoeInfo = ({ shoe }) => {
 
     const deleteClick = () => {
         Api.deleteShoe(shoe);
+        navigate("/shoes");
     };
 
     const saveClick = () => {
@@ -90,23 +94,34 @@ const ShoeInfo = ({ shoe }) => {
                 onChange={(e) => setUrl(e.target.value)}
             />
             <div className="buttons-container">
-                <button style={{ display: editDisplay }} onClick={editClick}>
+                <Button
+                    variant="contained"
+                    style={{ display: editDisplay }}
+                    onClick={editClick}
+                >
                     Edit
-                </button>
-                <button style={{ display: otherButtons }} onClick={saveClick}>
+                </Button>
+                <Button
+                    variant="contained"
+                    style={{ display: otherButtons }}
+                    onClick={saveClick}
+                >
                     Save
-                </button>
-                <button style={{ display: otherButtons }} onClick={cancelClick}>
+                </Button>
+                <Button
+                    variant="contained"
+                    style={{ display: otherButtons }}
+                    onClick={cancelClick}
+                >
                     Cancel
-                </button>
-                <Link to="/shoes">
-                    <button
-                        style={{ display: otherButtons }}
-                        onClick={deleteClick}
-                    >
-                        Delete
-                    </button>
-                </Link>
+                </Button>
+                <Button
+                    variant="contained"
+                    style={{ display: otherButtons }}
+                    onClick={deleteClick}
+                >
+                    Delete
+                </Button>
             </div>
         </Wrapped>
     );

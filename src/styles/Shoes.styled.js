@@ -5,12 +5,22 @@ const Wrapped = styled.section`
     flex-direction: column;
 
     .shoes-table {
-        margin: auto;
+        margin: 1rem auto;
+        overflow-y: scroll;
         display: grid;
         grid-template-columns: repeat(3, auto);
         width: 70%;
         height: 80%;
-        background-color: #e9f8f9;
+        background-color: #c0eef2;
+        border-radius: 7px;
+    }
+
+    h1 {
+        grid-column: 1 / 4;
+        width: 70%;
+        height: 15%;
+        margin: auto;
+        text-align: center;
     }
 `;
 

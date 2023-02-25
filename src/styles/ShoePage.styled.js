@@ -9,13 +9,15 @@ const Wrapped = styled.section`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: auto;
-        background-color: #333333;
+        margin: 1rem auto;
+        background-color: #c0eef2;
+        border-radius: 7px;
     }
 
     img {
         height: 100%;
         width: 40%;
+        border-radius: 7px;
     }
 `;
 

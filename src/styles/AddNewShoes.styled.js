@@ -12,8 +12,21 @@ const Wrapped = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
-        background-color: #555555;
+        margin: 1rem auto;
+        background-color: #c0eef2;
+        border-radius: 7px;
+    }
+
+    .buttons-container {
+        width: 30%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    button {
+        margin: auto;
     }
 `;
 

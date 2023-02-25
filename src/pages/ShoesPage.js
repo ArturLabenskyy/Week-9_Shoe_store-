@@ -21,17 +21,21 @@ const Shoes = () => {
         <Wrapped className="shoes-page">
             <Navbar />
             <div className="shoes-table">
-                {shoes.map((el) => {
-                    return (
-                        <Link
-                            to={`/shoes/${el.id}`}
-                            key={el.id}
-                            state={{ some: el }}
-                        >
-                            <Shoe shoe={el} key={el.id} />
-                        </Link>
-                    );
-                })}
+                {shoes.length > 0 ? (
+                    shoes.map((el) => {
+                        return (
+                            <Link
+                                to={`/shoes/${el.id}`}
+                                key={el.id}
+                                state={{ some: el }}
+                            >
+                                <Shoe shoe={el} key={el.id} />
+                            </Link>
+                        );
+                    })
+                ) : (
+                    <h1>There No Shoes In Stock</h1>
+                )}
             </div>
         </Wrapped>
     );

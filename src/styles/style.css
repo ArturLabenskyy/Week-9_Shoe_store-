@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Outfit&family=Poppins&family=Roboto&family=Rubik:ital@1&family=Russo+One&family=Yatra+One&display=swap');
+
+
+
 body {
+    font-family:  'Roboto', sans-serif #181823;
     height: 100vh;
 }
 
@@ -21,5 +26,24 @@ a {
 
 a:visited {
     color: #f2f2f2;
+}
+
+input {
+    height: 1.5rem;
+    background-color: #E9F8F9;
+    border: none;
+    border-radius: 7px;
+    margin-top: .5rem;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none !important;
+    border: 2px solid  #537FE7;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
 }
 
