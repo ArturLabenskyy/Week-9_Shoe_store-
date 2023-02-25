@@ -13,8 +13,8 @@ My __Shoe App__ project shows a shoes stock. By clicking on each shoe card user 
 
 ### React libraries:
 * __react-router-dom__
-* __Axios__
-* __Styled components__
-* __MaterialUI__
+* __axios__
+* __styled components__
+* __materialUI__
 * __react-icons__
 
